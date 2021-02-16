@@ -87,7 +87,7 @@ $(document).ready(function(){
         field = $('#clothes .cartField');
        
 
-    $.getJSON( "products.json", function( data ) {
+    $.getJSON( "js/products.json", function( data ) {
         $.each( data, function( key, val ) {
             products[key] = val;
             prBox.append(`<div class="col col-sm-6 col-md-4 col-12">
