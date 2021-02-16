@@ -1,0 +1,42 @@
+#howto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.video-box {
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video-box .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-box .overlay i {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.video-box.active .overlay {
+  opacity: 0;
+  visibility: hidden;
+}

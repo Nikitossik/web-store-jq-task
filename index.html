@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="libs/jquery-ui-1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="libs/fontawesome-free-5.15.2-web/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="libs/jquery/jquery.lazyloadxt.spinner.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/loader.css">
+
+  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <script src="libs/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <title>Ellegante - be classy man</title>
+</head>
+
+<body>
+  <div id="loader">
+    <div class="🤚">
+      <div class="👉"></div>
+      <div class="👉"></div>
+      <div class="👉"></div>
+      <div class="👉"></div>
+      <div class="🌴"></div>
+      <div class="👍"></div>
+    </div>
+  </div>
+
+  <div id="wrap">
+    <nav class="nav d-flex justify-content-end front">
+      <a href="#" data-toggle="modal" data-target="#cartModal" class="frontL cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="#" class="frontL sign-in-btn" data-toggle="modal" data-target="#formModal">
+        <i class="fas fa-user-plus"></i>
+      </a>
+      <a href="#" class='frontL' id="nav_btn">
+        <span></span>
+      </a>
+    </nav>
+
+    <nav class="navig-sliding">
+      <div class="row box">
+        <div class="navigation col-12">
+          <div class="text-box container-fluid">
+            <h2 class="text-center">Navigation</h2>
+          </div>
+          <nav class="navbar main d-flex justify-content-center">
+            <a class="navbar-brand">
+              Ellegante
+            </a>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="#about">About us</a></li>
+              <li><a href="#stuff">Our stuff</a></li>
+              <li><a href="#advantages">Our advantages</a></li>
+              <li><a href="#clothes">Clothes</a></li>
+              <li><a href="#offer">Special offer</a></li>
+              <li><a href="howto.html">How to</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </nav>
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Sign up</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form name='regUser' id='regUser' method="GET">
+              <div class="form-group">
+                <label for="email">Login</label>
+                <input type="text" class="form-control" name='login' id="login" aria-describedby="loginHelp"
+                  placeholder="Enter login">
+              </div>
+              <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="password" class="form-control" name='pass' id="pass" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Your cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body empty">
+          </div>
+          <div class="modal-footer">
+            <form name='buy' id='buyProducts' method="GET">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="">First and last name</span>
+                </div>
+                <input type="text" name='name' class="form-control">
+                <input type="text" name='surname' class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="tel">Telephone number</label>
+                <input type="tel" class="form-control validPhone" name='tel' id="tel">
+              </div>
+              <div class="form-group">
+                <label for="credit">Your credit card</label>
+                <input type="text" class="form-control validCardNumber validCardNumber" name='credit' id="credit">
+              </div>
+              <button type="submit" class="btn btn-primary">Buy</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="heading container text-center">
+        <h1 class="">Ellegante</h1>
+        <p class="">Be classy man</p>
+      </div>
+      <div id="header__carousel" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#header__carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#header__carousel" data-slide-to="1"></li>
+          <li data-target="#header__carousel" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item one active">
+            <div class="container-fluid text-center">
+              <h2>Find suitable clothes</h2>
+            </div>
+          </div>
+          <div class="carousel-item two">
+            <div class="container-fluid text-center">
+              <h2>Always be on style</h2>
+            </div>
+          </div>
+          <div class="carousel-item three">
+            <div class="container-fluid text-center">
+              <h2>Favorable prices</h2>
+            </div>
+          </div>
+        </div>
+
+        <a class="control carousel-control-prev" href="#header__carousel" data-slide="prev">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="control carousel-control-next" href="#header__carousel" data-slide="next">
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </header>
+    <script>
+      $(document).ready(function () {
+        $(".heading h1").css("animation", "fadeInLeft 1s");
+        $(".heading p").css({
+          animation: "fadeInRight 1s 0.5s",
+          opacity: "1",
+        });
+        $(".carousel").carousel({ interval: 3000 });
+      });
+
+    </script>
+    <main class="wrapper">
+      <section id='about'>
+        <h2 class='caption main'>About us a little...</h2>
+        <div class="row">
+          <div class="d-flex flex-column justify-content-center col col-sm-6 col-12">
+            <p>We are a chain of stores in New York that specializes in menswear classics. We have a huge
+              range of
+              goods
+              for every taste: suits, trousers, shirts. You can get yourself the right size and look elegant
+            </p>
+            <p>We are located at 500 5th Ave, New York, NY 10110, United States.</p>
+            <p class="lead">Visit us at any time :)</p>
+          </div>
+          <div class="col col-sm-6 col-12">
+            <div class="embed-responsive embed-responsive-4by3">
+              <iframe class="embed-responsive-item"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6044.915598608206!2d-73.98402019312786!3d40.7519547251971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a96d330ae1%3A0xee74c551bb9e8255!2sZARA!5e0!3m2!1sru!2sua!4v1612973050689!5m2!1sru!2sua"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='stuff'>
+        <h2 class="caption main">Our staff</h2>
+        <div class="row">
+          <div class="col col-12">
+            <h2 class="caption">Designers</h2>
+            <div class="designers card-deck">
+              <div class="card">
+                <img class="card-img-top" data-src="images/stuff/des1.jpg" alt="Jean Paul Gaultier">
+                <div class="card-img-overlay">
+                  <p class="card-text">Jean Paul Gaultier</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" data-src="images/stuff/des2.jpg" alt="Christian Lacroix">
+                <div class="card-img-overlay">
+                  <p class="card-text">Christian Lacroix</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" data-src="images/stuff/des3.jpg" alt="Valentino Garavani
+              ">
+                <div class="card-img-overlay">
+                  <p class="card-text">Valentino Garavani
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-12">
+          <h2 class="caption">Managers</h2>
+          <div class="managers card-deck justify-content-around">
+            <div class="col-12 col-sm-5">
+              <div class="card">
+                <img class="card-img-top" data-src="images/stuff/manage1.jpg" alt="Jean Paul Gaultier">
+                <div class="card-img-overlay">
+                  <p class="card-text">Maria Johnson</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5">
+              <div class="card">
+                <img class="card-img-top" data-src="images/stuff/manage2.jpg" alt="Christian Lacroix">
+                <div class="card-img-overlay">
+                  <p class="card-text">Aaron Stenford</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='advantages'>
+        <h2 class="caption">Our Advantages</h2>
+        <div class="row">
+          <div class="col col-lg-3 col-sm-6 col-12 text-center">
+            <i class="fas fa-tshirt"></i>
+            <h4>Great quality</h4>
+          </div>
+          <div class="col col-lg-3 col-sm-6 col-12 text-center">
+            <i class="fas fa-dollar-sign"></i>
+            <h4>Reasonable prices</h4>
+          </div>
+          <div class="col col-lg-3 col-sm-6 col-12 text-center">
+            <i class="fas fa-truck"></i>
+            <h4>Delivery to all corners of the world</h4>
+          </div>
+          <div class="col col-lg-3 col-sm-6 col-12 text-center">
+            <i class="far fa-clock"></i>
+            <h4>Over 10 years of experience in production</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-12">
+            <img data-src="images/clothes-ex/jaket.png" alt="" class="mx-auto d-block img-fluid">
+          </div>
+          <div class="d-flex align-items-center col-sm-6 col-12">
+            <p>Suit fabrics are made from natural, synthetic and combined fabrics. The performance of the web
+              is
+              highly
+              dependent on the composition of the material and the proportions of the fibers. </p>
+          </div>
+        </div>
+        <div class="row flex-sm-row-reverse">
+          <div class="col-sm-6 col-12">
+            <img data-src="images/clothes-ex/pants.png" alt="" class="mx-auto d-block img-fluid">
+          </div>
+          <div class="d-flex align-items-center col-sm-6 col-12">
+            <p>In production we use wool, cotton or linen. The fabrics are made up of fibers with numerous
+              cavities
+              between the threads. This gives the finished products high breathability, heat retention and
+              hygroscopic
+              properties. But in their pure form, woolen, linen and cotton fabrics are rarely used, because
+              they
+              wrinkle
+              heavily, are not elastic enough and are resistant to wear.
+
+              To improve the performance properties, natural materials are mixed with fibers of artificial or
+              synthetic
+              origin.</p>
+          </div>
+        </div>
+
+      </section>
+      <section id='clothes'>
+        <h2 class='caption main'>Clothes</h2>
+        <div class="prBox card-deck row"></div>
+        <div class="row containment">
+          <div class="col col-6 draggingPr d-flex justify-content-around align-items-center flex-wrap"></div>
+          <div class="col col-6 field">
+            <h2 class="message">Drag your clothes here:</h2>
+            <div class="infoBlock">
+              <span class="fieldInfo"><span>Items: </span><span id='prCount'>0</span></span>
+              <span class="fieldInfo"><span>Price: </span><span id='cost'>0</span>$</span>
+            </div>
+            <div class="cartField container-fluid">
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='offer'>
+        <h2 class="caption main">Special offer</h2>
+        <div class="row">
+          <div class="col col-12 d-flex flex-column justify-content-center">
+            <p>Hey, there! In honor of Valentine's Day - the holiday of lovers, we have a special offer for you! We give
+              you gift money for purchases in our store! The amount depends only on your luck! Hurry up, it remains:</p>
+            <h2 id='timer'></h2>
+          </div>
+          <div class="col col-12 d-flex justify-content-around align-items-center">
+            <a class="btn btn-primary btn-lg" href="offer.html">View more</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="conteiner-fluid footer">
+      <h3>Find us in social medias: </h3>
+      <div class="row col col-12 d-flex justify-content-center align-items-center">
+        <a href="" class="s-media"><i class="fab fa-instagram"></i></a>
+        <a href="" class="s-media"><i class="fab fa-facebook-f"></i></a>
+        <a href="" class="s-media"><i class="fab fa-twitter"></i></a>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="topBtn">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <div id="chatbot">
+    <form action="" id="chat-form">
+      <div id="answers"></div>
+      <div class="form-group">
+        <textarea class="form-control" id="chat-message" rows="1"></textarea>
+        <button class="form-control" id='send'>Send</button>
+      </div>
+    </form>
+    <div class="triggerChat">
+      <i class="fas fa-question-circle"></i>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

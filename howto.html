@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/fontawesome-free-5.15.2-web/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="libs/jquery/jquery.lazyloadxt.spinner.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/howto.css">
+
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="libs/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <title>Ellegante - be classy man</title>
+</head>
+
+<body>
+    <div id="loader">
+        <div class="🤚">
+            <div class="👉"></div>
+            <div class="👉"></div>
+            <div class="👉"></div>
+            <div class="👉"></div>
+            <div class="🌴"></div>
+            <div class="👍"></div>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav class="nav d-flex justify-content-end front">
+            <a href="#" data-toggle="modal" data-target="#cartModal" class="frontL cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="#" class="frontL sign-in-btn" data-toggle="modal" data-target="#formModal">
+                <i class="fas fa-user-plus"></i>
+            </a>
+            <a href="#" class='frontL' id="nav_btn">
+                <span></span>
+            </a>
+        </nav>
+
+        <nav class="navig-sliding">
+            <div class="row box">
+                <div class="navigation col-12">
+                    <div class="text-box container-fluid">
+                        <h2 class="text-center">Navigation</h2>
+                    </div>
+                    <nav class="navbar main d-flex justify-content-center">
+                        <a class="navbar-brand">
+                            Ellegante
+                        </a>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#about">About us</a></li>
+                            <li><a href="index.html#stuff">Our stuff</a></li>
+                            <li><a href="index.html#advantages">Our advantages</a></li>
+                            <li><a href="index.html#clothes">Clothes</a></li>
+                            <li><a href="#offer">Special offer</a></li>
+                            <li><a href="#howto">How to</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Sign up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form name='regUser' id='regUser' method="GET">
+                            <div class="form-group">
+                                <label for="email">Login</label>
+                                <input type="text" class="form-control" name='login' id="login"
+                                    aria-describedby="loginHelp" placeholder="Enter login">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">Password</label>
+                                <input type="password" class="form-control" name='pass' id="pass"
+                                    placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Your cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body empty">
+                    </div>
+                    <div class="modal-footer">
+                        <form name='buy' id='buyProducts' method="GET">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="">First and last name</span>
+                                </div>
+                                <input type="text" name='name' class="form-control">
+                                <input type="text" name='surname' class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Telephone number</label>
+                                <input type="tel" class="form-control validPhone" name='tel' id="tel">
+                            </div>
+                            <div class="form-group">
+                                <label for="credit">Your credit card</label>
+                                <input type="text" class="form-control validCardNumber validCardNumber" name='credit'
+                                    id="credit">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="header">
+            <div class="heading container text-center">
+                <h1 class="">Ellegante</h1>
+                <p class="">Be classy man</p>
+            </div>
+            <div id="header__carousel" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#header__carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#header__carousel" data-slide-to="1"></li>
+                    <li data-target="#header__carousel" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item one active">
+                        <div class="container-fluid text-center">
+                            <h2>Find suitable clothes</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item two">
+                        <div class="container-fluid text-center">
+                            <h2>Always be on style</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item three">
+                        <div class="container-fluid text-center">
+                            <h2>Favorable prices</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="control carousel-control-prev" href="#header__carousel" data-slide="prev">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a class="control carousel-control-next" href="#header__carousel" data-slide="next">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </header>
+        <script>
+            $(document).ready(function () {
+                $(".heading h1").css("animation", "fadeInLeft 1s");
+                $(".heading p").css({
+                    animation: "fadeInRight 1s 0.5s",
+                    opacity: "1",
+                });
+                $(".carousel").carousel({ interval: 3000 });
+            });
+
+        </script>
+        <main class="wrapper">
+            <section id='howto'>
+                <div class="video-box">
+                    <div class="overlay">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <video id='how-to-v' poster="images/video-pre.jpg">
+                        <source src="video/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+            <section id='offer'>
+                <h2 class="caption main">Special offer</h2>
+                <div class="row">
+                    <div class="col col-12 d-flex flex-column justify-content-center">
+                        <p>Hey, there! In honor of Valentine's Day - the holiday of lovers, we have a special offer for
+                            you! We give
+                            you gift money for purchases in our store! The amount depends only on your luck! Hurry up,
+                            it remains:</p>
+                        <h2 id='timer'></h2>
+                    </div>
+                    <div class="col col-12 d-flex justify-content-around align-items-center">
+                        <a class="btn btn-primary btn-lg" href="offer.html">View more</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="conteiner-fluid footer">
+            <h3>Find us in social medias: </h3>
+            <div class="row col col-12 d-flex justify-content-center align-items-center">
+                <a href="" class="s-media"><i class="fab fa-instagram"></i></a>
+                <a href="" class="s-media"><i class="fab fa-facebook-f"></i></a>
+                <a href="" class="s-media"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+    </div>
+    <a href="#" class="topBtn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <div id="chatbot">
+        <form action="" id="chat-form">
+            <div id="answers"></div>
+            <div class="form-group">
+                <textarea class="form-control" id="chat-message" rows="1"></textarea>
+                <button class="form-control" id='send'>Send</button>
+            </div>
+        </form>
+        <div class="triggerChat">
+            <i class="fas fa-question-circle"></i>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/howto.js"></script>
+</body>
+
+</html>

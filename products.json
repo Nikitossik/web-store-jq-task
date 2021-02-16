@@ -1,0 +1,50 @@
+[
+    {
+      "id": "1",
+      "price": "1200",
+      "name": "Soho Suit With Half Beading",
+      "imageCoverMini": "../images/products/soho1/soho1-mini.jpg",
+      "imageCoverModel": "../images/products/soho1/soho1-model.jpg",
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "2",
+        "price": "1250",
+        "name": "Soho suit with half-collar",
+        "imageCoverMini": "../images/products/soho2/soho2-mini.jpg",
+        "imageCoverModel": "../images/products/soho2/soho2-model.jpg",
+        "sizes": ["S", "M", "XL"]
+    },
+    {
+        "id": "3",
+        "price": "1100",
+        "name": "Wool tuxedo suit",
+        "imageCoverMini": "../images/products/soho3/soho3-mini.jpg",
+        "imageCoverModel": "../images/products/soho3/soho3-model.jpg",
+        "sizes": ["M", "L", "XL"]
+    },
+    {
+        "id": "4",
+        "price": "1600",
+        "name": "Classic suit",
+        "imageCoverMini": "../images/products/costume1/costume1-mini.jpg",
+        "imageCoverModel": "../images/products/costume1/costume1-model.jpg",
+        "sizes": ["S", "M", "XL"]
+    },
+    {
+        "id": "5",
+        "price": "1500",
+        "name": "Anthracite classic suit with jacket",
+        "imageCoverMini": "../images/products/costume2/costume2-mini.jpg",
+        "imageCoverModel": "../images/products/costume2/costume2-model.jpg",
+        "sizes": ["S", "M", "L"]
+    },
+    {
+        "id": "6",
+        "price": "1300",
+        "name": "Manhattan suit with lining",
+        "imageCoverMini": "../images/products/manhattan1/manhattan1-mini.jpg",
+        "imageCoverModel": "../images/products/manhattan1/manhattan1-model.jpg",
+        "sizes": ["L", "XL"]
+    }
+  ]

@@ -1,0 +1,144 @@
+body {
+  background: #fff !important;
+}
+
+#timer {
+  font-size: 4rem !important;
+  color: #ff0a6c !important;
+}
+
+section {
+  background: #ffc3c1 !important;
+}
+
+.footer {
+  background: #c64645 !important;
+}
+
+.topBtn {
+  background: #f97f7f !important;
+}
+
+.topBtn:hover {
+  background: #fff !important;
+  color: #f97f7f !important;
+  border: 2px solid #f97f7f !important;
+}
+
+#chatbot {
+  background: #7a3e3e !important;
+}
+
+#chatbot #chat-form {
+  background: #ac6464 !important;
+}
+
+#chatbot .form-group button {
+  background: #623232 !important;
+  color: #fff !important;
+}
+
+#chatbot .form-group button:hover {
+  background: #623232 !important;
+  color: #ff9898 !important;
+}
+
+#chatbot textarea {
+  background: #ffd0d0 !important;
+  color: #623232 !important;
+}
+
+.human_answ {
+  background: #ffcaca !important;
+}
+
+#chatbot ::-webkit-scrollbar-thumb {
+  background: #7a1c1c !important;
+}
+
+.open-env {
+  margin-top: 100px;
+  background: #7a1c1c;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.envelope-box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope {
+  width: 726px;
+  height: 400px;
+  position: relative;
+  z-index: 4;
+  background: #882f2f;
+  user-select: none;
+}
+
+.envelope .envelope-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(-100%)) rotateX(180deg);
+  transition: 0.2s;
+  z-index: 2;
+  transform-origin: bottom;
+}
+
+.envelope .envelope-body {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(5px);
+  z-index: 3;
+}
+
+.envelope .paper {
+  background-color: #fff;
+  width: 75%;
+  height: 40%;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope.opened .envelope-top {
+  transform: translateY(calc(-100% + 5px)) rotateX(0);
+}
+
+.envelope.opened .paper {
+  animation: paperRise 1s ease-in-out forwards;
+}
+
+@keyframes paperRise {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -120%);
+    z-index: 4;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    z-index: 4;
+  }
+}
