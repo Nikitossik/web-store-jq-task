@@ -11,8 +11,8 @@
         "id": "2",
         "price": "1250",
         "name": "Soho suit with half-collar",
-        "imageCoverMini": "../images/products/soho2/soho2-mini.jpg",
-        "imageCoverModel": "../images/products/soho2/soho2-model.jpg",
+        "imageCoverMini": "images/products/soho2/soho2-mini.jpg",
+        "imageCoverModel": "images/products/soho2/soho2-model.jpg",
         "sizes": ["S", "M", "XL"]
     },
     {
