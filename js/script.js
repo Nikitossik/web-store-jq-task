@@ -26,14 +26,22 @@ $(document).ready(function(){
         $(this).toggleClass('btn-active');
         $('.navig-sliding').toggleClass('active');
         $('body').toggleClass('noscroll');
-        $('.navbar-brand, .main li a, .text-box h2').toggleClass('animated');
-        $('.main li a').click(function(){
+        $('.main li a').toggleClass('animated');
+        $('.text-box h2').toggleClass('animated');
+        $('.navbar-brand').toggleClass('animated');
+        return false;
+    });
+
+    $('.main li a').each(function(){
+        $(this).click(function(){
+            $('.main li a').toggleClass('animated');
+            $('.text-box h2').toggleClass('animated');
+            $('.navbar-brand').toggleClass('animated');
             $('.navig-sliding').toggleClass('active');
             $('#nav_btn').toggleClass('btn-active');
             $('body').toggleClass('noscroll');
         });
-        return false;
-    });
+    })
 
     //logged user greeting
 
