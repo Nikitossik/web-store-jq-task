@@ -43,8 +43,8 @@
         "id": "6",
         "price": "1300",
         "name": "Manhattan suit with lining",
-        "imageCoverMini": "images/products/manhattan1/manhattan1-mini.jpg",
-        "imageCoverModel": "images/products/manhattan1/manhattan1-model.jpg",
+        "imageCoverMini": "../images/products/manhattan1/manhattan1-mini.jpg",
+        "imageCoverModel": "../images/products/manhattan1/manhattan1-model.jpg",
         "sizes": ["L", "XL"]
     }
   ]
